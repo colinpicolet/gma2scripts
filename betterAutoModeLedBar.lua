@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
 --Plugin written by: Tristan Perrot 
 -- Modified for ledbars by : Colinx
+-- date : May 2024
 
 --Configuration
 
