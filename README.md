@@ -10,6 +10,6 @@ Scripts present here :
 
 You will need to use these scripts in tandem with a macro in order to stop them whenever you want
 
-Scripts developped with the help of [https://github.com/ttperr](https://github.com/ttperr)
+Scripts developped with the help of [github.com/ttperr](https://github.com/ttperr)
 
-Go check out [tsm-tp.fr](tsm-tp.fr)
+Go check out [tsm-tp.fr](https://tsm-tp.fr)
