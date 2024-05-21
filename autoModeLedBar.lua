@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 --Plugin written by: Tristan Perrot 
 -- Modified for ledbars by : Colinx
-
+ 
 --Configuration
 
 local page = 13
