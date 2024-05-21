@@ -16,7 +16,7 @@ local pageColSpeedFader = 2
 ------------------------- MOTORIZED LIGHTS -------------------------
 
 -- number of groups you want to control (usually the number of different types of lights you have)
-nblights = 1
+local nblights = 1
 ---only working on ledbars here so nblights=1
 
 -- the number in ExecButtons

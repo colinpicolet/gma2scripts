@@ -29,10 +29,6 @@ local nbColorGroups = 2
 -- no need for motoreffects because ledbars can't move lol
 local ledBarEffects = { { 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144 } }
 
--- Effects who have impact on position and dimmer are stored at the end of motorEffects and the 1st position in the list needs to be declare
--- position are from 1, #dimEffects
-local startOfDimAndPositionEffects = { 6, 9 }
-
 -- The macro number associated with white in your colorpicker 
 -- your colors need to be in the color picker 
 -- the size of this array needs to equal to nbLightgroups !!
@@ -81,43 +77,18 @@ function Autoplay()
             -- center and sides
             elseif (choice == 2) then
                local c = math.random(0, 11)
-               if c == 11 then
                   gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + 0)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + 0)
+                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + (c+1)%11)
+                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + (c+1)%11)
                   gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + c)
-               else 
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + c+1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + c+1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + c)
-               end
             
             -- each line individually
             elseif (choice == 3) then
                local c = math.random(0, 11)
-               if c == 9 then
                   gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + c+1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + c+2)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + 0)
-               elseif c == 10 then
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + c+1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + 0)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + 1)
-               elseif c == 11 then
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + 0)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + 1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + 2)
-               else
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + c+1)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + c+2)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + c+3)
-               end
-
+                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + (c+1)%11)
+                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + (c+2)%11)
+                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + (c+3)%11)
             end
          end         
 
