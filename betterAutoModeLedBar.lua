@@ -77,18 +77,17 @@ function Autoplay()
             -- center and sides
             elseif (choice == 2) then
                local c = math.random(0, 11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + (c+1)%11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + (c+1)%11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + c)
+               local offset = (c+1)%11
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c ' + Macro '.. macroStartColors[choice][4] + c)
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + offset ' + Macro '.. macroStartColors[choice][3] + offset)
             
             -- each line individually
             elseif (choice == 3) then
                local c = math.random(0, 11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + (c+1)%11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + (c+2)%11)
-                  gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + (c+3)%11)
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][1] + c)
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][2] + (c+1)%11)
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][3] + (c+2)%11)
+               gma.cmd('Goto Macro ' .. macroStartColors[choice][4] + (c+3)%11)
             end
          end         
 
