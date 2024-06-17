@@ -1,6 +1,6 @@
 # grandma2 scripts
 
-Lua scripts written for my specific grandma2 patch (my ledbars are the *showtec octostrip mk2*)
+Lua scripts written for my specific grandma2 patch (my ledbars are the *showtec octostrip mk2* in 208 channel mode)
 
 Scripts present here :
 
